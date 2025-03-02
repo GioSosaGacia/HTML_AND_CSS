@@ -6,7 +6,17 @@ h1 span{
     color: #037bc0;
 }
 
-h2 span{
-    color: chocolate;
+nav a{
+    text-transform: uppercase;
 }
 
+/* PaRA SELECCIONAR UNA CLASE SE UNA UN PUNTO . */
+.navegacion a{
+    text-transform: lowercase;
+}
+
+
+/* cuando es id agregas un # */
+#navegacion a{
+    text-transform: capitalize;
+}

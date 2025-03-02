@@ -42,3 +42,44 @@ Tambien se puede añador transparencia con RGBA y HSLA y recientemente tambien e
 
 
 ****************Selectores***********************
+Los selectores CSS permiten identificar a qué elemento (o elementos) se aplicarán los estilos definidos en dicho bloque. Los más conocidos son los de etiqueta (p, ul) etc.
+
+Por ejemplo en css a los elementos que esten dentro de un section a{ } aqui el selector seria el section el cual permitira modificar todas las anclas que esten dentro de ese apartado:
+
+    footer a{
+        text-transform: uppercase;
+    }
+
+Un pseudo selector es lo mismo pero despues de la etiqueta se agregan dps puntos: el cual nos da acceso a más funciones:
+
+    /* first-child solo le aplica estilo al primer elemento */
+    nth-child(3) -> permite seleccionar un elemento si ahi 5 elementos y selecciones el 3, al que este en esa posición lo modificará
+        nav a:first-child{
+            color: black;
+        }
+
+Css se queda con la ultima instrucción de arriba hacia abajo, mientras mas especifico sea el selector es más  provable que css lo tome en cuenta y es a lo que se le llama especificidad!!
+
+
+
+
+
+
+******Especificidad pregunta para obtener un trabajo******************
+Con la especificidad podemos saber que valores serán tomado en cuanta
+por el navegador, dependiendo que que tan especifico sea nuestro SELECTOR 
+
+css se escribe en casacada de arriba hacia abjo, dentro de la especificidad ahi clases i Id's, ambos se definen en el HTML, usando -> class o id
+
+    1.class como caracteristica soporta 1 o más y tambien se puede reutilizar, en las clases si puede existir mas de una clase con el mismo nombre
+
+    2.id solo se  puede asignar 1 por elemento HTML y tambien solo se debe de utilizar 1 por documento, puedes asignar varios pero cada uno con diferente nombre no con el mismo 
+
+Utilizar clases y id's  en los selectores permite tener una especificidad mas alta 
+
+Evitar crear selectores muy complicados, hará que el codigo sea mas dificil de mantener 
+
+Se suele utilizar mas un class que un id. en css si son dos palabras es conveniente usar - medio para unirlar
+
+Existe una calculadora de especificidad donde el rango mas bajo es una etiqueta, con dos selectore, despues una clase y el mayor peso es el id
+
