@@ -1,0 +1,88 @@
+HTML = Hyper Text Markup Languaje,  lenguaje de marcado de hipertexto
+p = parrafors
+nav = navegador
+header = encabezado
+main = contenido principal 
+footer = pie de página
+
+Esturctura basica:
+Contiene etiquetas de apertura y cierre las cuales indican donde inicia y donde termina una etiquetas
+
+<head> -> se coloca información meta la cual es inf del sitio web, lenguaje, titulo, descripcción, enlaces a hojas de estilo, informacion importante para el navegador
+
+<body> -> colocamos todo lo que se verá en la página web, como imagenes, textos, videos y animaciones
+
+<index> -> indica que es el archivo principal
+<meta charset="UTF-8"> utf-8 indica que usa caracteres especiales
+
+<Headings> son etiquetas de h1 - h6 siendo el h1 la de rango mas alto y se usan para los titulos, se pueden utilizar para dividir las secciones pero no puedes agregar demaciados maximo 1 u 2
+
+
+**extenciones instaladas: LiveServer, Tag, auto rename tag(para renombrar etiquetas), auto close tag,  auto complete tag, vscode icon, para apariencia flatland monoka itheme
+
+
+**como habilitar las extenciones, dentro del HTML presionando Ctrl + shif + p 
+
+
+
+
+****************Para validar el HTML******************
+usamos el link validator.w3.org ->  https://validator.w3.org/ y seleccionamos check by input y copiamos el codigo html a revisar
+
+
+
+
+***************Imagenes********************
+1.<img> para agregar imagenes mediante atributos en HTML como: src(source), alt(texto alternativo en caso de que una imagen no se cargue bien), width(ancho), height(altura), ahi etiquetas que no tienen etiqueta de cierre
+2.<figure> Muestra multiples imagenes</figure>
+
+
+
+
+
+**************Enlaces*****************
+Son rutas a diferentes paginas o secciones 
+<a href=""></a> -> en lace href es la ruta a donde ira ese enlace, tambien podemos usar imagenes dentro de un enlace
+<a href="nosotros.html">Ir a pagína nosotros</a>
+1.Con la tecla shif + alt + flecha hacia abajo
+2.a*6 crea seis enlaces
+
+
+
+
+
+*******Estructurar el codigo HTML********************
+1.Tu sitio web deberatener una estructura valida el cual debe de seguir ciertos estandares, identificando las partes, superior header, nav, secciones o section que van dentro del <main><section></section><aside></aside></main><footer></footer>
+
+<header> Superios  </header>
+<nav> Grupo de enlaces o navegación </nav>
+<main>
+    <section>
+        Cuando el primer hijo es un heading e introduce una nueva seccion 
+    </section>
+    <aside>
+        Contenido que acompaña a la seccion principal 
+    </aside>
+
+    <div> 
+        Cuando uno de los anteriores no se puede utilizar, ademas agrupa elementos
+    </div>
+</main>  Contenido principl solo va 1 por archivo
+<footer> Pie de pagina   </footer>
+
+2.Para que el codigo sea mas facil de LiveServer
+3.Si escribes HTML con una estructura valida tu sitio tendra mejor posicionamiento seo en buscadores
+
+    nota: dentro de <a href="#">Oficina</a> en el href el uso del # indica que un no sabemos a donde nos enviara este enlace por lo cual deshabilita el mismo
+    <section>
+        <h2>Categorias de Productos</h2>
+        <div>
+            <img src="img/categoria1.jpg" alt="Categoria 1">
+            <a href="#">Oficina</a>
+        </div>
+
+
+
+
+*******************Comentarios**************** 
+<!-- --> los podemos usar para identificar algunas secciones o apartados de nuestro archivo 
