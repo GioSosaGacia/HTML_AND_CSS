@@ -1,0 +1,44 @@
+Permite cambiar la apariencia del HTML modificando el 
+ 1.Tamaño
+ 2.Colore
+ 3.Actua sobre cualquier elemento 
+
+ Se aplica mediante etiques y usando llaves {}
+
+1.Se usa el selector el cual es una p,b,li,a,estructura
+    p{
+        Todo lo que esta dentro de las llaves es lo que se aplicará al selector
+
+        Los dos juntos son conocidos como declaraciones: (color,font-size)
+        Usa propiedades ->  color:valor ejemplo black
+                            font-size : 20px -> px= pixeles que es la unidad
+    }
+
+2.Unidades:
+    px, em, rem etc
+    Otras unidades que puedes definir como unidad es:
+        padding, margin, width, height se usan para controlar la dostancia entre elementos 
+
+    Tambien existen unidades fijas como pixeles, centimetros y relativas es decir que toman su valor dependiendo del valor definido por otra propiedad
+
+3.Para agregar una hoja de estilo al html usamos la etiqueta <style> </style> en el apartado de <head> </head> del html
+
+4.pARA PODER ligar una hoja de estilo al html usamos link, rel = relation 
+<link rel="stylesheet" href="CSS/app.css">
+
+
+
+
+*****************Colores*****************
+Se pueden definir colores en base a su nombre, por su valor hexadecimal hex, RGB, HSL HUGE SATURATION AN LIGHT
+    Un colore puede utilizar combinación hexadecimal blanco #ffffff o negro #000000
+
+Algunas aplicaciones como Photoshop p Adobe xd TE Permite obtener colores en base a cierta cantidad de un valor como son RGB y HSL, estos tambien son soportados por CSS
+
+Tambien se puede añador transparencia con RGBA y HSLA y recientemente tambien es posible hacerlo por medio de RGB Y HSL  A = alfa
+
+
+
+
+
+****************Selectores***********************
