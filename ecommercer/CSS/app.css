@@ -11,6 +11,11 @@ a{
     color: black;
 }
 
+/* recomendable para usar en todas las imagenes hara que cubra el 100 % */
+img {
+    max-width: 100%;
+}
+
 .contenedor {
     max-width: 1200px;
     /* margin-top: 0;
@@ -42,8 +47,12 @@ a{
     border-width: 1px; */
     /* en vez de usar las 3 lineas podemos usae una sola linea, es igual para marging y padding*/
     padding: 20px 0;
-
     padding-top: 10px;
+    /*Con este display flex accedemos a varias propiedades y con ello aplicamos el flexBos a un grupo de elementos  */
+    display: flex;
+    /* no es necesario declarar row ya que se aplica por defecto */
+    flex-direction: row;
+    justify-content: space-between;
 
 }
 
@@ -56,6 +65,22 @@ a{
     /* Para que cubra la imagen a corde de la pantalla y no quede chica o grande */
     background-size: cover;
     height: 550px;
+}
+
+/* Categorias  */
+
+.listado-categorias {
+    display: grid;
+    /* se puede usar repeat(cuantas veces, de que tamañp) */
+    /* grid-template-columns: 300px 300px 300px 300px; */
+    /* grid-template-columns: repeat(4,300px); */
+    /* Indica 3 de 1 fr */
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: 300px 300px; */
+    /* grid-template-rows: 1fr 1fr; fila*/
+    /* height: 300px; altura */
+    /* gap es la separacion se puede hacer por columna o fila o ambos solo usando gap */
+    gap: 20px;
 }
 
 

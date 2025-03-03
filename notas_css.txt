@@ -165,3 +165,88 @@ Exiten atajos tanto para:
 ************Imagenes como backgroung*****************
 Usando background-image o mediante CSS
 Comunmente a las imagenes grandes en la ventana principal superior se les conoce como  HERO
+
+
+
+
+
+
+***************FlexBox**********************************
+Fue diseñado comoun modelo de unidimienciones para crear layouts.
+Antes de usarlo se utilizaban tablas o floats 
+
+    Ejes en flexBox: coloca o distribuye los elementos en una direccion ya sea fila(row) o columna(column).
+    Row es colocado por default al definir un display:flex; y mostrara los elementos ya se a de izquierda o derecha(row) conocido como Main Axis:flex-direction:row o derecha a izquierda con (row-reverse)
+
+    Colunm o colunm-revese los elementos se colocarán de arriba a abajo o a lo opuesto
+
+    No añade animaciones solo se usa para alinear los elementos 
+
+    Flex-box se debe de asignar en el elemento padre a los hijos.
+
+        <div class="contenedor-navegacion">
+        <nav class="nav-principal contenedor"> flex se debe de aplicar aqui porque es el padre de los enlaces
+            <a href="index.html">Inicio </a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="blog.html">Blog</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </div>
+
+    /*Con este display flex accedemos a varias propiedades y con ello aplicamos el flexBos a un grupo de elementos  */
+    display: flex;
+    /* no es necesario declarar row ya que se aplica por defecto, se usa para cambiar la direccion */
+    flex-direction: row;
+
+
+
+***********Alineacion horizontal y vertical en FlexBox********
+Flex-box da acceso a estas dos propiedades: 
+
+    1.Para justify se con row
+    Usa propiedades como "justify-content" sirve para alinear el contenido horizontalmente si estas usando flex-direcction: row; y si estas usando flex-direction: colunm; ser'a utilizado para alinear el contenido de manera vertical.
+
+    2.Para align se usa con colonm
+    "align-items" Usando flex-direction: row; será utilizado para alienar el contenido vertical, pero si es colunm alineara el contenido de manera horizontal
+
+    Al usar la herramienta de desarrollo y usar flex al momento de inspeccionar nos mostrará un editos de flexbox el cual podemos manipular
+
+
+
+
+
+
+
+
+    *************************CSS Grid**********************
+Permite definir la ubicacion y el tamaño de los elementos en tu sitio web, ademas de que permite distribuir elementos de manera vertical y orizontal el mismo tiempo y no demanera independiente como FlexBox
+
+    Se habilita usando display:grid;, ademas tiene propiedades exclusivas:
+
+    Para crear columnas usamos grid-template-colunms
+    Para filas usamos grid-teplate-rows
+    Tambien podemos usar grid-template-areas para diseño 
+
+    grid-lines nos muestra un maquedado de lineas para saber donde deseamos colocar un elemento |  |    |   |
+
+    grid track: puede ser vertical | | |  u horizontal - una arriba o debajo de otra
+
+    grid cell se utiliza al usar un grid completo con rows
+
+    grid area para usar nombres dentro del grid
+
+No se recomienda usar las medidas en pixeles, se recomienda "fr" = a una fraccion x numeri fr seran las fracciones agregadas para x elemento:
+    .listado-categorias {
+    display: grid;
+    /* se puede usar repeat(cuantas veces, de que tamañp) */
+    /* grid-template-columns: 300px 300px 300px 300px; */
+    /* grid-template-columns: 3fr 1fr; */
+    grid-template-columns: repeat(4,300px);
+    grid-template-rows: 300px 300px;
+
+}
+
+
+
