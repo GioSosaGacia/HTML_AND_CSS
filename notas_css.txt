@@ -79,7 +79,89 @@ Utilizar clases y id's  en los selectores permite tener una especificidad mas al
 
 Evitar crear selectores muy complicados, hará que el codigo sea mas dificil de mantener 
 
-Se suele utilizar mas un class que un id. en css si son dos palabras es conveniente usar - medio para unirlar
+Se suele utilizar mas un class que un id. en css si son dos palabras es conveniente usar - medio para unirlas ejemplo casa-amarilla
 
 Existe una calculadora de especificidad donde el rango mas bajo es una etiqueta, con dos selectore, despues una clase y el mayor peso es el id
 
+        nav a{
+            text-transform: uppercase;
+        }
+
+        /* PaRA SELECCIONAR UNA CLASE SE UNA UN PUNTO . */
+        .navegacion a{
+            text-transform: lowercase;
+        }
+
+
+        /* cuando es id agregas un # */
+        #navegacion a{
+            text-transform: capitalize;
+        }
+
+un id es mas pesado que una clase lo cual hace que sean mas lentos, lo recomendable es usar clases
+
+
+    
+
+
+    **********Agregando clases a los selectores**************
+    ejemplo dentro de una nav podemo tener una clase y en cada ancla que exista modemos agregar las misma clase, dentro de uan clase puede haver dos clases;  
+            <nav class="navegador color-rojo"> 
+                <a class=" enlace" href="index.html">Inicio </a> 
+            </nav>
+
+
+    Nos podemos guiar con MODULOS: un modulo es definir un nav con una clase y dentro de esa clase contiene varias anclas las cuales estan dentro del nav eso es un modulo, BEM Y SMACSS
+
+
+
+
+******************Box Model*************
+pregunta de entrevista
+En box model css todo es una caja, pero como sea esa caja y que medidas tenga depende de 4 cosas:
+    1: Contenido
+    2:Padding o relleno
+    3:Borde
+    4:Margin on margen 
+
+Sin box model podriamos tener un resultado no deseado al usar estas propiedades.
+
+box-sizing
+    Content-box se adapta al width y al margin
+    border-box se adata especificamente al ancho declarado en el width
+
+Marging: es el espacio que se usa entre elementos y padding es el espacio que se utiliza dentro de un elemento
+
+Nota: dependiendo del navegador que se use algunos agregan stilo css, lo cual podria hacer cambios en nuestro sitio web, para resolverlo podemos usar "Normalize.css" debemos de buscarlo en la web copiar el codigo, crear en css un archivo normalize y pegar el codigo de la pagina web normalize y eso nos ayudará a estandarizar el codigo creado en cualquier web o navegador para que este no cambie, debemos de asegurar no esta traducido al español
+
+Normalize va antes de agregar el link de estilos css y no despues
+
+
+
+
+
+
+
+******************+Displays en css*****************
+Existen 3, todos los elementos ya contienen un display por defecto, unos elementos comparten el mism otros tienen otro
+    Block: Un elemento de coloca debajo del otro sin importar su tamaño, se les pude aplicar width and height
+    Inline: elementos a la derecha uno tras otro, a este no se le puede poner alto y ancho
+    Inline-Block: Permite darle un width, height, margin a un elemento inline, lo que no es posible hacer en un elmento inline 
+
+    Tambien esta el Display-flex y el grid
+
+
+
+
+************Agrupando el codigo**********
+Exiten atajos tanto para:
+    Margin:50px 0 30px 20 px arriba, derecha, abajo e izquierda
+    padding: los mismo que el marging para el padding 
+    border: 1px solid #e1e1e1  ancho del border, si es solido(tipo), color
+
+
+
+
+************Imagenes como backgroung*****************
+Usando background-image o mediante CSS
+Comunmente a las imagenes grandes en la ventana principal superior se les conoce como  HERO

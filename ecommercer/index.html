@@ -4,22 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommers</title>
+    <link rel="stylesheet" href="CSS/normalize.css">
     <link rel="stylesheet" href="CSS/app.css">
 </head>
 <body>
     <!-- header Aveces incluye inf de cuando fue publicado algo  -->
     <header>
-        <h1>Tienda <span> Muebles </span></h1>
+        <h1 class="nombre-sitio">Tienda <span> Muebles </span></h1>
     </header>
 
-    <nav id="navegacion">
-        <a href="index.html">Inicio </a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="tienda.html">Tienda</a>
-        <a href="blog.html">Blog</a>
-        <a href="galeria.html">Galeria</a>
-        <a href="contacto.html">Contacto</a>
-    </nav>
+    <div class="contenedor-navegacion">
+        <nav class="nav-principal contenedor">
+            <a href="index.html">Inicio </a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="blog.html">Blog</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </div>
+
+    <div class="hero"></div>
 
     <!-- Esta es una nueva seccion, regla si el primer hijo es un hearing <h> entonces es un section, pero tambien incluyen una nueva sección -->
     <section>
@@ -39,9 +44,16 @@
         </div>
     </section> 
     
-    <section>
+    <section class="sobre-nosotros">
         <div>
             <h2>Sobre Nosotros</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor perspiciatis atque, velit odio excepturi officia placeat voluptas, tenetur minima autem nisi non ipsum nostrum ducimus quam nesciunt voluptatibus corrupti. Modi.</p>
+        </div>
+    </section>
+
+    <section class="sobre-empresa">
+        <div>
+            <h2>Sobre Empresa</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor perspiciatis atque, velit odio excepturi officia placeat voluptas, tenetur minima autem nisi non ipsum nostrum ducimus quam nesciunt voluptatibus corrupti. Modi.</p>
         </div>
     </section>

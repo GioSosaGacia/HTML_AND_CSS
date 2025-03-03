@@ -1,22 +1,71 @@
-h1{
-    color: #000;
+html {
+    box-sizing: border-box;
+}
+*, *:after {
+    box-sizing: inherit;
 }
 
-h1 span{
+/* Globales */
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.contenedor {
+    max-width: 1200px;
+    /* margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto; */
+    margin: 0 auto 0 auto;
+    /* margin-inline: auto; algunos usan esto y es lo mismo es una propiedad nueva*/
+
+}
+
+/* Header y navegacion */
+.nombre-sitio {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.nombre-sitio span{
     color: #037bc0;
 }
 
-nav a{
-    text-transform: uppercase;
+.contenedor-navegacion {
+    border-top: 1px solid #e1e1e1;
 }
 
-/* PaRA SELECCIONAR UNA CLASE SE UNA UN PUNTO . */
-.navegacion a{
-    text-transform: lowercase;
+.nav-principal{
+    /* border-color: #e1e1e1;
+    border-top-style: solid;
+    border-width: 1px; */
+    /* en vez de usar las 3 lineas podemos usae una sola linea, es igual para marging y padding*/
+    padding: 20px 0;
+
+    padding-top: 10px;
+
 }
 
 
-/* cuando es id agregas un # */
-#navegacion a{
-    text-transform: capitalize;
+.hero {
+    /* Cuando agregamos una imagen en css para agregar una debemos de salirnos al folder principal con los 2 puntos .. */
+    background-image: url(../img/principal.jpg);
+    /* Para que no se repita la imagen */
+    background-repeat: no-repeat;
+    /* Para que cubra la imagen a corde de la pantalla y no quede chica o grande */
+    background-size: cover;
+    height: 550px;
 }
+
+
+
+/* box model */
+/* .sobre-nosotros {
+    background-color: red;
+    width: 200px;
+    padding es el espacio creado entre el contenido de un elemento y su borde 
+    padding: 25px;
+    border-box hace que se respete el ancho del width ya que al usar un padding cambia el tamaño 
+    box-sizing: border-box; 
+} */
