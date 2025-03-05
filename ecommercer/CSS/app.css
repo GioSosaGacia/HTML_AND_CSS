@@ -1,11 +1,44 @@
 html {
+    /* se usa para que no modifique un tamaño de un elemento al usar margin o width */
     box-sizing: border-box;
+    /* Usando esta linea un rem = 10px  */
+    font-size: 62.5%; 
 }
+
+/* parte del box-sizing tambien para todos los proyectos */
 *, *:after {
     box-sizing: inherit;
 }
 
-/* Globales */
+/* se aplica en el body porque es el que contiene todo */
+body {
+    font-family: "Raleway", sans-serif;
+    /* usamos esta para que la base sea de 16px */
+    font-size: 1.6rem;
+    /* interlineado para los proyectos */
+    line-height: 1.5;
+}
+
+/* de aqui hacia arriba es recomendable para todos los proyectos */
+
+/* Globales son elementos que aplican a todo el proyecto */
+h1, h2, h3 {
+    font-family: "Playfair", serif;
+    /* todos los headring usan margenes y lo eliminamos de la siguiente manera */
+    margin: 0 0 5rem 0;
+}
+
+h1 {
+    font-size: 5rem;
+}
+h2 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 3rem;
+}
+
+
 a{
     text-decoration: none;
     color: black;
@@ -14,10 +47,12 @@ a{
 /* recomendable para usar en todas las imagenes hara que cubra el 100 % */
 img {
     max-width: 100%;
+/* Tambien ayuda a eliminar espacios ya sea entre la imagen y la ancla */
+    display: block; 
 }
 
 .contenedor {
-    max-width: 1200px;
+    max-width: 120rem;
     /* margin-top: 0;
     margin-right: auto;
     margin-bottom: 0;
@@ -29,16 +64,17 @@ img {
 
 /* Header y navegacion */
 .nombre-sitio {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 5rem;
+    /* margin-bottom: 5rem; ya esta en los h1,h2 y h3 */
     text-align: center;
+   
 }
 .nombre-sitio span{
     color: #037bc0;
 }
 
 .contenedor-navegacion {
-    border-top: 1px solid #e1e1e1;
+    border-top: .1rem solid #e1e1e1;
 }
 
 .nav-principal{
@@ -46,12 +82,12 @@ img {
     border-top-style: solid;
     border-width: 1px; */
     /* en vez de usar las 3 lineas podemos usae una sola linea, es igual para marging y padding*/
-    padding: 20px 0;
-    padding-top: 10px;
+    padding: 2rem 0;
+    /* padding-top: 10px; */
     /*Con este display flex accedemos a varias propiedades y con ello aplicamos el flexBos a un grupo de elementos  */
     display: flex;
     /* no es necesario declarar row ya que se aplica por defecto */
-    flex-direction: row;
+    /* flex-direction: row; */
     justify-content: space-between;
 
 }
@@ -64,10 +100,34 @@ img {
     background-repeat: no-repeat;
     /* Para que cubra la imagen a corde de la pantalla y no quede chica o grande */
     background-size: cover;
-    height: 550px;
+    /* para seleccionar que seccion del bakground debe de tomar */
+    background-position: center center;
+    height: 55rem;
 }
 
 /* Categorias  */
+.categorias {
+    padding-top: 5rem;
+}
+
+.categorias h2{
+    text-align: center;
+}
+
+.categoria a{
+    text-align: center;
+    display: block;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+/* pseudo elementos */
+.categoria a:hover{
+    background-color: #6595b1;
+    color: #fff;
+    /* esquinas rdondeadas */
+    border-bottom-right-radius: 1rem;
+}
 
 .listado-categorias {
     display: grid;
@@ -80,7 +140,7 @@ img {
     /* grid-template-rows: 1fr 1fr; fila*/
     /* height: 300px; altura */
     /* gap es la separacion se puede hacer por columna o fila o ambos solo usando gap */
-    gap: 20px;
+    gap: 2rem;
 }
 
 

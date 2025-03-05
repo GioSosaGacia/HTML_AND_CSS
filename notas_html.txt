@@ -18,7 +18,7 @@ Contiene etiquetas de apertura y cierre las cuales indican donde inicia y donde 
 <Headings> son etiquetas de h1 - h6 siendo el h1 la de rango mas alto y se usan para los titulos, se pueden utilizar para dividir las secciones pero no puedes agregar demaciados maximo 1 u 2
 
 
-**extenciones instaladas: LiveServer, Tag, auto rename tag(para renombrar etiquetas), auto close tag,  auto complete tag, vscode icon, para apariencia flatland monoka itheme
+**extenciones instaladas: LiveServer, Tag, auto rename tag(para renombrar etiquetas), auto close tag,  auto complete tag, vscode icon, para apariencia flatland monoka itheme, css peek: permite ver un preview desde el html
 
 
 **como habilitar las extenciones, dentro del HTML presionando Ctrl + shif + p 
@@ -42,9 +42,9 @@ usamos el link validator.w3.org ->  https://validator.w3.org/ y seleccionamos ch
 
 **************Enlaces*****************
 Son rutas a diferentes paginas o secciones 
-<a href=""></a> -> en lace href es la ruta a donde ira ese enlace, tambien podemos usar imagenes dentro de un enlace
+<a href=""></a> -> enlace href es la ruta a donde ira ese enlace, tambien podemos usar imagenes dentro de un enlace
 <a href="nosotros.html">Ir a pagína nosotros</a>
-1.Con la tecla shif + alt + flecha hacia abajo
+1.Con la tecla shif + alt + flecha hacia abajo se copia la linea superior agregando otra linea igual 
 2.a*6 crea seis enlaces
 
 
@@ -52,9 +52,9 @@ Son rutas a diferentes paginas o secciones
 
 
 *******Estructurar el codigo HTML********************
-1.Tu sitio web deberatener una estructura valida el cual debe de seguir ciertos estandares, identificando las partes, superior header, nav, secciones o section que van dentro del <main><section></section><aside></aside></main><footer></footer>
+1.Tu sitio web debera tener una estructura valida el cual debe de seguir ciertos estandares, identificando las partes, superior header, nav, secciones o section que van dentro del <main><section></section><aside></aside></main><footer></footer>
 
-<header> Superios  </header>
+<header> Superior  </header>
 <nav> Grupo de enlaces o navegación </nav>
 <main>
     <section>
@@ -70,7 +70,7 @@ Son rutas a diferentes paginas o secciones
 </main>  Contenido principl solo va 1 por archivo
 <footer> Pie de pagina   </footer>
 
-2.Para que el codigo sea mas facil de LiveServer
+2.Para que el codigo sea mas facil de visualizar usamos LiveServer
 3.Si escribes HTML con una estructura valida tu sitio tendra mejor posicionamiento seo en buscadores
 
     nota: dentro de <a href="#">Oficina</a> en el href el uso del # indica que un no sabemos a donde nos enviara este enlace por lo cual deshabilita el mismo

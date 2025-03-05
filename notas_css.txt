@@ -250,3 +250,96 @@ No se recomienda usar las medidas en pixeles, se recomienda "fr" = a una fraccio
 
 
 
+
+
+
+***************Fuentes*************************
+Mediante CSS podemos cambiar el estilo de la fuente que tendra la página web, tambien se puede modificar el ancho, tamaño, tipo, alineación etc.
+
+    1.Podemos añadir otras fuentes con la propiedad @font-face: se debe de descargar la fuente para usarla, se debe de agregar la rutas y minimo descargar 4 tipos ya que depende del navegador es la fuente que se utilizará.
+            @font-face {
+                font-family: nombreFuente;
+                src: ul(ubicacion.woff);
+            }
+
+Consideraciones: unas fuentes son de paga, se recomienda verificar la licencia o utilizar google fonts para usar fuentes gratis, entre mas fuentes agreges tu sitio web será más lento, recomendable no usar mas de tres fuentes
+
+        Usamos raleway y playfair display y para agregarlo a css o html copiamos el link: 
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+            Y se agrega en el Html despues del normalize pero antes de nuestro css:
+
+                    body {
+                        font-family: "Raleway", sans-serif;
+                    }
+
+                    /* Globales */
+                    h1, h2, h3 {
+                        font-family: "Playfair", serif;
+                    }
+
+
+
+
+
+
+
+
+
+*********************Unidades en CSS**************************
+Algunas propiedades en css usan unidades como: width, margin, padding, font-size etc, la unidad va junto al valor, algunas propiedades pueden utilizar el -20px mo en los margenes
+
+    Unidades adsolutas son las que son exactas como los pixeles: 
+        Pixeles:
+    
+    Para mejor adaptabilidad entre pantallas en mejor usar unidades relativas como rem
+    Unidades relativas tomas su valor en base a otro elemento y son em, rem, vh,vw y porcentajes, se adaptam mejor a diferentes resoluciones y densidades de pixeles, lo cual es mejor para la cantidad de dispositivos que usan los usuarioas al nevegar 
+
+    Las unidades relativas toman su valor en base a otro elemento: Puede ser de header que tome 100px un h1 que esta como hijo tome el 50% = 50px
+        Rem´s: 3rem los rems toma en consideracion el tamaño que tengamos en el HTML por dafault es de 16px 
+        No son tan recomendables 
+        Em´s: su tamaño es relativo a otros elementos 1 * 3 veces mayor de uno al otro -1 mas pequeño + de 1 mas grande  3em
+        vw = view port width la ventaja de usarlo es que adapta al tamaño del dispositivo en uso 10vw
+
+    Para convertir de pixeles a rem podemos usar la calculadora de px a rem 
+    Para no estar usando la calculadora de pixeles existe un hack de hacerlo falcil al usar rem y es usar un font-size en la etiqueta html del css del 65.5% donde un rem sera igual a 10px 
+
+            html {
+                box-sizing: border-box;
+                /* Usando esta linea un rem = 10px  */
+                font-size: 62.5%; 
+            }
+            
+
+            body {
+                font-family: "Raleway", sans-serif;
+                /* usamos esta para que la base sea de 16px */
+                font-size: 1.6rem;
+            }
+
+
+
+
+
+
+
+*********Formas de escribor codigo en CSs*******************++++
+Cualquier de los 4 te permitirá completar un proyecto 
+    BEM: block element modifier 
+            .card{} --> nombre del bloque y cada elemento dentro de ese bloque usará doble guion --> bajo 
+            .card__titulo{},
+            para un modificador del elemento usamo guion medio -- como puede ser al usar un hover 
+            .card__titulo--activo{}
+    MÓDULOS:
+            .card {}, .a{}, card img{} es el que estamos usando
+    UTILIDADES:
+            Creas una regla de css como: .text-center{}, .color-red-100{}, bg-blue-200{} creas utilidades y las bas agregando a tus elementos HTML
+    SMACSS:
+            Arquitectura escalable y no esta muy actualizado y debes de verificar que elementos comparten atributos etc
+            #header, #article, #footer { width: 960px;, marging: auto;}
+
+    Se puede usar mas de uno en un mismo proyecto pero lo ideal es usar 1 o 2
+
+    Se recomienda ir ajustando el tamaño de texto o encabezados de arriba hacia abajo 
