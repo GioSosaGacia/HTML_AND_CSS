@@ -343,3 +343,59 @@ Cualquier de los 4 te permitirá completar un proyecto
     Se puede usar mas de uno en un mismo proyecto pero lo ideal es usar 1 o 2
 
     Se recomienda ir ajustando el tamaño de texto o encabezados de arriba hacia abajo 
+
+
+
+
+
+
+    *******************Sobre Nosotros******************
+/* Bloque nosotros */
+.sobre-nosotros {
+    /* linear gradient es un degradador lineal que se usa con bgimg, to right que hacia la izq, del 0 al 50 negro y del 51 hacia adelante rojo */
+    /* background-image: linear-gradient(to right, black 50%, red 100%); */
+    background-image: linear-gradient(to right, transparent 50%, #037bc0 50%),url(../img/nosotros.jpg);
+    background-position: left center;
+    padding: 8rem 0;
+    background-repeat: no-repeat;
+    /* al usar la , usamos el 100% para linear gradien y despues 120 rem para la imagen */
+    background-size: 100%, 120rem;
+}
+
+
+
+
+
+************************Cuando utilizar CSS Grid y cuando FlexBox*******************
+1.FlexBox para la alineación o distribucion de los elementos que estaran dentro de contenedores
+
+2.Grid para definir el layout de tu sitio web, como puede ser las columnas o contendores de elementos: | | |
+
+
+
+        Cuando usar grid para la separacion no usas padding si no gap:
+                .sobre-nosotros-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    /* con grip no usas padding usas gap */
+                    column-gap: 5rem;
+                }
+
+                .texto-nosotros {
+                    /* indica que valla de la linea 2 a l 3 */
+                    grid-column: 2/3;
+                }
+
+
+        Usando flex:
+                    .sobre-nosotros-grid {
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+
+                    .texto-nosotros {
+                        flex-basis: 50%;  --> para el ancho del elemento
+                        padding-left: 10rem;
+                    }
+
+        

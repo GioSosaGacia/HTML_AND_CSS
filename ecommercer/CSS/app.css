@@ -144,6 +144,41 @@ img {
 }
 
 
+/* Bloque nosotros */
+.sobre-nosotros {
+    /* linear gradient es un degradador lineal que se usa con bgimg, to right que hacia la izq, del 0 al 50 negro y del 51 hacia adelante rojo */
+    /* background-image: linear-gradient(to right, black 50%, red 100%); */
+    background-image: linear-gradient(to right, transparent 50%, #037bc0 50%),url(../img/nosotros.jpg);
+    background-position: left center;
+    padding: 8rem 0;
+    background-repeat: no-repeat;
+    /* al usar la , usamos el 100% para linear gradien y despues 120 rem para la imagen */
+    background-size: 100%, 120rem;
+}
+
+/* .sobre-nosotros-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* con grip no usas padding usas gap 
+    column-gap: 8rem;
+}
+
+.texto-nosotros {
+    indica que valla de la linea 2 a l 3 
+    grid-column: 2/3;
+} */
+
+.sobre-nosotros-grid {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.texto-nosotros {
+/* Ancho del elemento flex-basis */
+    flex-basis: 50%;
+    padding-left: 10rem;
+    color: #fff;
+}
 
 /* box model */
 /* .sobre-nosotros {
