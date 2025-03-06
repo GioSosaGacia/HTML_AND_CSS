@@ -62,6 +62,31 @@ img {
 
 }
 
+
+.btn {
+    background-color: #8cbc00;
+    /* hace que un elemento tome todo el ancho  */
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    /* debemos de usar el ancho que soporta la fuente en este caso la fuente si lo soporta */
+    font-weight: 900;
+    padding: 1rem;
+    /* transición  */
+    transition: background-color .3s ease-out;
+}
+
+.btn:hover {
+    background-color: #769c02;
+}
+
+
+
+/* utilidades se pueden usar en muchos elementos */
+.text-center {
+    text-align: center;
+}
+
 /* Header y navegacion */
 .nombre-sitio {
     margin-top: 5rem;
@@ -180,7 +205,151 @@ img {
     color: #fff;
 }
 
-/* box model */
+
+
+/* Listado de productos */
+.contenido-principal {
+    padding-top: 5rem;
+}
+.listado-productos {
+    display: grid;
+    /* damos la misma forma a cada uno de los productos y despues los vamos editando uno por uno */
+    grid-template-columns: repeat(6, 1fr);
+    /* Tambien se puede usar solo gap y se aplica a row y colunm  */
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+/* ntn selecciono un producto en esta aso el 1 */
+.producto:nth-child(1) {
+    /* tambien se puede usar grid-colunm-start y grid-colunm-end para indicar donde inicia y donde termina */
+    grid-column: 1/7;
+    /* Puedo usar un grid dentro de otro, lo usamos para crear dos bloques uno para la imagen y el otro para el contenido */
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+/* limitamos a la imagen 1 */
+.producto:nth-child(1) img {
+    height: 43rem;
+    width: 100%;
+    /* mantiene un elemento dentro de las medidad declradas */
+    object-fit: cover;
+}
+
+
+.producto:nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.producto:nth-child(2) img,
+.producto:nth-child(3) img {
+    /* height y width son obligatorios para usar object-fit */
+    height: 30rem;
+    width: 100%;
+    /* mantiene un elemento dentro de las medidad declradas */
+    object-fit: cover;
+}
+
+.producto:nth-child(3) {
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+
+/*
+    Si queremos ahorar lineas este mismo fragmento lo podemos agregar el dos solo separado por una coma, 
+.producto:nth-child(3) img {
+    height y width son obligatorios para usar object-fit
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+} */
+
+.producto:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.producto:nth-child(5) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.producto:nth-child(6) {
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+.producto {
+    background-color: #037bc0;
+}
+
+.texto-producto {
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+}
+
+.texto-producto h3{
+    margin: 0;
+}
+
+.texto-producto p{
+    margin: 0 0 .5rem 0;
+}
+.texto-producto .precio{
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+
+
+
+/* Footer */
+.side-footer {
+    border-top: 1px solid #e1e1e1;
+    margin-top: 5rem;
+    padding-top: 5rem;
+}
+
+.grid-footer h3 {
+    margin-bottom: .5rem;
+}
+/* usando grid */
+.grid-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+
+.footer-menu a{
+    display: block;
+}
+
+.copyright {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+
+
+
+/* -------------uSANDO FLEX----------------- */
+/* .grid-footer {
+    display: flex;
+    gap: 2rem;
+} */
+
+/* .grid-footer div {
+    flex 1 es el factor de crcimiento que tendra un div donde cada div recive un pixel 
+    usando nth-child() seleccionamos el div deseado y podemos modificar el espacio que abarcara 
+    flex: 1;
+
+} */
+
+
+
+
+/*---------------- box model ----------------------*/
 /* .sobre-nosotros {
     background-color: red;
     width: 200px;

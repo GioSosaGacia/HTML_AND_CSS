@@ -289,13 +289,13 @@ Consideraciones: unas fuentes son de paga, se recomienda verificar la licencia o
 
 
 *********************Unidades en CSS**************************
-Algunas propiedades en css usan unidades como: width, margin, padding, font-size etc, la unidad va junto al valor, algunas propiedades pueden utilizar el -20px mo en los margenes
+Algunas propiedades en css usan unidades como: width, margin, padding, font-size etc, la unidad va junto el valor, algunas propiedades pueden utilizar el -20px no en los margenes
 
     Unidades adsolutas son las que son exactas como los pixeles: 
         Pixeles:
     
-    Para mejor adaptabilidad entre pantallas en mejor usar unidades relativas como rem
-    Unidades relativas tomas su valor en base a otro elemento y son em, rem, vh,vw y porcentajes, se adaptam mejor a diferentes resoluciones y densidades de pixeles, lo cual es mejor para la cantidad de dispositivos que usan los usuarioas al nevegar 
+    Para mejor adaptabilidad entre pantallas en mejor usar unidades relativas como rem.
+    Unidades relativas toman su valor en base a otro elemento y son em, rem, vh,vw y porcentajes, se adaptam mejor a diferentes resoluciones y densidades de pixeles, lo cual es mejor para la cantidad de dispositivos que usan los usuarios al nevegar.
 
     Las unidades relativas toman su valor en base a otro elemento: Puede ser de header que tome 100px un h1 que esta como hijo tome el 50% = 50px
         Rem´s: 3rem los rems toma en consideracion el tamaño que tengamos en el HTML por dafault es de 16px 
@@ -304,11 +304,24 @@ Algunas propiedades en css usan unidades como: width, margin, padding, font-size
         vw = view port width la ventaja de usarlo es que adapta al tamaño del dispositivo en uso 10vw
 
     Para convertir de pixeles a rem podemos usar la calculadora de px a rem 
-    Para no estar usando la calculadora de pixeles existe un hack de hacerlo falcil al usar rem y es usar un font-size en la etiqueta html del css del 65.5% donde un rem sera igual a 10px 
+    Para no estar usando la calculadora de pixeles existe un hack de hacerlo falcil al usar rem y es usar un font-size en la etiqueta html del css del 65.5% donde 1 rem sera igual a 10px 
+
+El valor box-sizing: inherit; hace que el elemento o pseudo-elemento adopte el valor de box-sizing del elemento padre. Esto es útil para asegurar que el modelo de caja sea consistente en toda la página.
+
+¿Cómo funciona border-box?
+Cuando aplicas box-sizing: border-box;, el ancho y alto de un elemento se calculan de la siguiente manera:
+
+El ancho total y alto total del elemento ya incluyen el contenido, el relleno y el borde.
+Es decir, si defines un ancho de 100px en un elemento con box-sizing: border-box;, ese elemento tendrá un ancho de 100px en total, incluso si tiene un relleno o un borde. El relleno y el borde se incluyen dentro de esos 100px.
+
+Explicación:
+*: El selector universal se refiere a todos los elementos de la página web. Al aplicar box-sizing: inherit;, se asegura de que todos los elementos utilicen el modelo de caja heredado, es decir, tomen el valor de box-sizing del elemento padre.
+
+*:after: Este selector se refiere a todos los pseudo-elementos :after. El pseudo-elemento :after se usa para insertar contenido después del contenido de un elemento. Al igual que con *, box-sizing: inherit; hace que el pseudo-elemento herede el modelo de caja del elemento padre.
 
             html {
                 box-sizing: border-box;
-                /* Usando esta linea un rem = 10px  */
+                /* Usando esta linea 1 rem = 10px  */
                 font-size: 62.5%; 
             }
             
@@ -353,6 +366,7 @@ Cualquier de los 4 te permitirá completar un proyecto
 /* Bloque nosotros */
 .sobre-nosotros {
     /* linear gradient es un degradador lineal que se usa con bgimg, to right que hacia la izq, del 0 al 50 negro y del 51 hacia adelante rojo */
+
     /* background-image: linear-gradient(to right, black 50%, red 100%); */
     background-image: linear-gradient(to right, transparent 50%, #037bc0 50%),url(../img/nosotros.jpg);
     background-position: left center;
@@ -382,7 +396,7 @@ Cualquier de los 4 te permitirá completar un proyecto
                 }
 
                 .texto-nosotros {
-                    /* indica que valla de la linea 2 a l 3 */
+                    /* indica que valla de la linea 2 a la 3 */
                     grid-column: 2/3;
                 }
 
@@ -398,4 +412,51 @@ Cualquier de los 4 te permitirá completar un proyecto
                         padding-left: 10rem;
                     }
 
-        
+
+
+
+
+********************Productos***********************
+Para usar grid o flex se debe de usar la clase del elemento padre para porterior a ello posisionar los hijos usando flex o grid: usamos nth-child para seleccionar de manaera individual a los hijos dentro de una div o section 
+
+    .contenido-principal {
+    padding-top: 5rem;
+}
+.listado-productos {
+    display: grid;
+    /* damos la misma forma a cada uno de los productos y despues los vamos editando uno por uno */
+    grid-template-columns: repeat(6, 1fr);
+    /* Tambien se puede usar solo gap y se aplica a row y colunm  */
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+/* ntn selecciono un producto en esta aso el 1 */
+.producto:nth-child(1) {
+    /* tambien se puede usar grid-colunm-start y grid-colunm-end para indicar donde inicia y donde termina */
+    grid-column: 1/7;
+}
+
+
+
+
+
+
+
+
+************************Object-fit********************************
+El objectfit se lo aplicas al elemento o imagen a la cual deseas aplicarlo:
+
+        La propiedad object-fit en CSS se usa para especificar cómo se debe ajustar el contenido de un elemento de tipo <img>, <video>, o cualquier otro elemento con un contenido de tipo multimedia dentro de un contenedor con un tamaño específico.
+
+        Esta propiedad es especialmente útil cuando trabajas con imágenes o vídeos dentro de contenedores con dimensiones fijas o variables y deseas controlar cómo se ajustan (o recortan) esos contenidos para que encajen en el espacio disponible sin distorsionarse.
+
+
+            .producto:nth-child(2) img,
+            .producto:nth-child(3) img {
+                /* height y width son obligatorios para usar object-fit */
+                height: 30rem;
+                width: 100%;
+                /* mantiene un elemento dentro de las medidad declradas */
+                object-fit: cover;
+            }
