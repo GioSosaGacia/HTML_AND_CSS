@@ -232,7 +232,7 @@ img {
 .producto:nth-child(1) img {
     height: 43rem;
     width: 100%;
-    /* mantiene un elemento dentro de las medidad declradas */
+    /* mantiene un elemento dentro de las medidad declaradas */
     object-fit: cover;
 }
 
@@ -301,6 +301,13 @@ img {
     font-weight: 900;
 }
 
+/* Sobre la empresa */
+.sobre-empresa{
+    margin: 2rem;
+    border: slategray solid 1px;
+    text-align: justify;
+    
+}
 
 
 /* Footer */
@@ -308,6 +315,7 @@ img {
     border-top: 1px solid #e1e1e1;
     margin-top: 5rem;
     padding-top: 5rem;
+    /* background-color: rgb(240, 248, 252); */
 }
 
 .grid-footer h3 {
@@ -358,3 +366,25 @@ img {
     border-box hace que se respete el ancho del width ya que al usar un padding cambia el tamaño 
     box-sizing: border-box; 
 } */
+
+
+/* html nosotros */
+.contenido-nosotros {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* Auto-fit hace que el contenido se acomode  */
+    /* sirve para crear sitios responsive sin usar un media query --> tienen mas poder de posicionar un elemento  */
+    /* minmax() toma el minimo y el maximo, cuando sea mayor a 250 px asigna 1fr a cada uno de los elementos y cuando es menor  de 250px definira un 1fr pero en la parte sup e inf en vez de d2 columnas será 1 sola columna */
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    column-gap: 4rem;
+}
+
+.informacion-nosotros {
+    /* crea la vista en columnas posicionando de izq a dere */
+    display: flex;
+    /*El valor column de flex-direction se utiliza para organizar los elementos hijos en una columna vertical (es decir, de arriba hacia abajo).  */
+    flex-direction: column;
+    /* se usa para alinear horizontalmente cuando es row */
+    justify-content: center;
+
+}

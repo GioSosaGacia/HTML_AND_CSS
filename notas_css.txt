@@ -445,7 +445,13 @@ Para usar grid o flex se debe de usar la clase del elemento padre para porterior
 
 
 ************************Object-fit********************************
-El objectfit se lo aplicas al elemento o imagen a la cual deseas aplicarlo:
+El objectfit se lo aplicas al elemento o imagen a la cual deseas aplicarlo: En CSS, la propiedad object-fit se usa para controlar cómo se ajusta un contenido de un elemento reemplazado (como una imagen, video, iframe, etc.) dentro de su contenedor. Permite especificar cómo debe comportarse el contenido cuando sus dimensiones no coinciden con las del contenedor.
+
+Valores de object-fit
+fill (valor por defecto):
+
+El contenido se estira para llenar completamente el contenedor, sin mantener sus proporciones. Esto puede causar que la imagen o el video se distorsionen.
+
 
         La propiedad object-fit en CSS se usa para especificar cómo se debe ajustar el contenido de un elemento de tipo <img>, <video>, o cualquier otro elemento con un contenido de tipo multimedia dentro de un contenedor con un tamaño específico.
 

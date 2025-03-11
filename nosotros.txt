@@ -1,0 +1,2 @@
+********************El archivo creado base.HTML*******************
+ Como su nombre lo dice es una base o plantilla donde las demas vistas tendran ese mismo contenido
