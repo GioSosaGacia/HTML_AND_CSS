@@ -74,6 +74,7 @@ img {
     padding: 1rem;
     /* transición  */
     transition: background-color .3s ease-out;
+    text-align: center;
 }
 
 .btn:hover {
@@ -85,6 +86,10 @@ img {
 /* utilidades se pueden usar en muchos elementos */
 .text-center {
     text-align: center;
+}
+
+.max-width-30 {
+    max-width: 30rem;
 }
 
 /* Header y navegacion */
@@ -387,4 +392,63 @@ img {
     /* se usa para alinear horizontalmente cuando es row */
     justify-content: center;
 
+}
+
+
+/* blog.html */
+.contenedor-blog {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+}
+
+.entrada {
+    border-bottom: 2px solid #e1e1e1 ;
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
+}
+
+.entrada:last-of-type {
+    border: none;
+}
+
+.entrada-meta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.entrada-meta p {
+    font-weight: 700;
+}
+
+.entrada-meta span {
+    color: #037bc0;
+}
+
+
+/* Entrada.html */
+.contenido-entrada-blog {
+    width: 60rem;
+    margin: auto;
+    
+}
+
+
+/* galeria.html */
+
+.galeria {
+    /* remueve las biñetas */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Para que las imagen se vea igual en proporsión */
+.galeria img {
+    height: 40rem;
+    width: 40rem;
+    object-fit: cover;
 }

@@ -86,3 +86,28 @@ Son rutas a diferentes paginas o secciones
 
 *******************Comentarios**************** 
 <!-- --> los podemos usar para identificar algunas secciones o apartados de nuestro archivo 
+
+
+
+
+
+************article*************
+En HTML, la etiqueta <article> se utiliza para representar contenido autónomo, que tiene sentido por sí mismo y puede ser distribuido o reutilizado de manera independiente. Es especialmente útil para contenido como entradas de blog, noticias, foros, comentarios, publicaciones, etc.
+
+La idea detrás del <article> es que el contenido dentro de esta etiqueta debe ser independiente y coherente por sí mismo, es decir, debe tener un principio y un final que permitan que ese fragmento de contenido tenga sentido fuera de la página donde está presente.
+
+Se utiliza para crear un articulo dentro de un blog o un periodico, noticias, ademas es autorepresentativo.
+    1.Se puede usar un header dentro de un article 
+
+    1.1El span lo usamos como un posible selector para dar estilo dentro de un parrafo
+
+
+*************aside**********************
+Características del <aside>:
+El contenido dentro de un <aside> puede estar relacionado con el contenido principal, pero no es esencial para su comprensión.
+
+Se utiliza generalmente para información que complementa, pero no es crucial para el contenido principal. Por ejemplo, una barra lateral con enlaces adicionales o una cita de un autor en un artículo.
+
+El <aside> puede colocarse dentro de un artículo (<article>), dentro de una sección (<section>) o incluso fuera de ellas, dependiendo de la estructura del contenido.
+
+Se utiliza para representar un contenido, tal vez un article de lado izquiero y del lado derecho el aside el cual representa contenido relevante o relacionado al article
