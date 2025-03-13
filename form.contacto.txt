@@ -1,0 +1,208 @@
+********************El archivo creado base.HTML*******************
+ Como su nombre lo dice es una base o plantilla donde las demas vistas tendran ese mismo contenido
+
+
+
+ *********************************Un formulario*************************
+Nota: --> con .campo y damos enter se crea un div con la class campo
+
+Un formulario siempre inicia con la etiqueta <form> Aunque no es obligatorio </form>, el valor por defecto de un input es el type='text'
+
+    Permite extraer los datos que necesitamos para continuar con una actividad la mayoria inician con <input>
+    como entrada de datos y mediante un atributo type definimos que tipo de entrada es la que queremos:
+        boton, date, color, email, file, text, password, etc.
+
+input no tiene etiqueta de cierre, ademas siempre va acompañado de un <label></label> la cual sirve como un texto decriptivo con un control de formulario en este caso el input text
+    El mas comun es text:
+
+Labels and inputs usan display inline: uno tras otro, para hacerlos en bloque usamos un div para que se coloquen hacia abajo:
+    1.placeholder sirve para dejar un comunidado o escrito dentro de un input para indicar al usuario lo que espera el sistema que teclie
+    2.type: define que tipo de campo estamos utilizando 
+    3.podemos hacer que mediante el label nombre al dar click en nombre nos envie al input para escribir inf mediante el uso de for en el label y el id en el input podemos asociar esos dos elementos.
+    4.value="Hola desde el input"  llena el campo de manera predeterminada o automaticamente
+    5.El atributo required en HTML se utiliza en formularios para indicar que un campo es obligatorio y debe ser completado antes de que el formulario se pueda enviar : <input type="text" id="nombre" name="nombre" required>
+    6.El elemento <fieldset> en HTML se utiliza para agrupar y organizar elementos dentro de un formulario. Su principal propósito es crear un conjunto lógico de campos relacionados dentro de un formulario, y, a menudo, se usa junto con el elemento <legend> para proporcionar un título o descripción a ese grupo de campos.
+    7.<legend> Es el texto que describe al fielset, como un titulo</legend>
+
+       <form>
+            <fieldset>
+                <legend>Tus datos</legend>
+                <div class="campo">
+                    <label for="nombre">Nombre: </label>
+                    <input value="Hola desde el input" id="nombre" type="text" placeholder="Coloca tu nombre">
+                </div>
+
+                <div class="campo">
+                    <label for="asunto">Asunto </label>
+                    <input id="asunto" type="text" placeholder="Asunto">
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input id="email" type="email" placeholder="E-mail">
+                </div>
+
+                <div class="campo">
+                    <label for="tel">Teléfono</label>
+                    <input id="tel" type="tel" placeholder="Teléfono">
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Mensaje</label>
+                    <!-- textarea si tiene etiqueta de cierre -->
+                    <textarea id="mensaje" rows="5" cols="10"></textarea>
+                </div>
+            </fieldset>
+        <form/>
+
+
+Formulario país:
+    1. <fieldset>
+    Sirve para agrupar elementos de un formulario relacionados entre sí, creando una sección con un borde alrededor de los campos.
+
+    2. <legend>
+    Define un título o descripción para el <fieldset>.
+   
+    3. <div class="campo">
+    Es un contenedor div con la clase "campo".
+    Se usa para aplicar estilos CSS o estructurar el contenido dentro del <fieldset>.
+    Aquí, agrupa la etiqueta <label> y el <select>.
+
+    4. <label for="pais">País</label>
+    Asocia un texto descriptivo con un campo de entrada (en este caso, el <select> con id="pais").
+    Facilita la accesibilidad y mejora la usabilidad al hacer clic en el texto "País", lo que activará el <select> correspondiente.
+
+    5. <select name="" id="pais">
+    Crea un menú desplegable de opciones.
+    El usuario puede elegir un país de la lista.
+    Tiene un id="pais" que lo relaciona con el <label>.
+    No tiene name="", lo cual es un error si se va a enviar en un formulario (debería tener name="pais" para que se envíe el valor seleccionado).
+
+    6. <option disabled>--Seleccione--</option>
+    Crea una opción deshabilitada, que aparece como una sugerencia inicial.
+    Como está disabled, el usuario no puede seleccionarla.
+    
+    7. <option value="MX" selected>México</option>
+    Crea una opción con el valor "MX" y el texto "México".
+    El atributo selected hace que esta opción sea la elegida por defecto cuando se carga la página.
+
+    8. Otras <option> (Perú, Colombia, Argentina, España, Chile)
+    Son las diferentes opciones que el usuario puede elegir en el desplegable.
+    Cada una tiene un atributo value="" con un código de país.
+
+        <fieldset>
+                <legend>País</legend>
+                <div class="campo">
+                    <label for="pais">País</label>
+                    <select name="" id="pais">
+                        <option disabled>--Seleccione--</option>
+                        <option value="MX" selected>México</option>
+                        <option value="PR">Perú</option>
+                        <option value="CO">Colombia</option>
+                        <option value="AR">Argentina</option>
+                        <option value="ES">España</option>
+                        <option value="CL">Chile</option>
+                    </select>
+                </div>
+            </fieldset>
+
+        El atributo name en una etiqueta HTML sirve para identificar un campo dentro de un formulario y permitir que su valor sea enviado al servidor cuando el usuario envía el formulario.
+
+        📌 ¿En qué elementos se usa name?
+        Se usa principalmente en elementos de entrada de formularios como:
+
+        <input> (cajas de texto, contraseñas, correos, etc.)
+        <textarea> (área de texto)
+        <select> (listas desplegables)
+        <radio> y <checkbox> (botones de opción y casillas de verificación)
+        <button> (botones de formulario)
+
+        ¿Qué hace name aquí?
+    Cuando el usuario llena el formulario y lo envía, los valores de los campos se envían con sus respectivos name.
+    En el servidor (procesar.php en este caso), los valores pueden recuperarse, por ejemplo, en PHP con $_POST['usuario'], $_POST['email'] y $_POST['pais'].
+    Sin el atributo name, el valor del campo no se enviará al servidor.
+
+
+    ✅ Conclusión
+El atributo name es clave para recoger los datos de un formulario en el servidor. Sin él, los valores no se envían y no se pueden procesar. 🚀
+
+
+
+
+*******Información extra******
+El atributo name="" permite ligar un grupo de datos en este caso de tipo radio, si ahi 5 ligados solo permitira seleccionar uno, siendo util para los formularios donde solo puedes eligir un valor y el check-box te permite eligir varios elementos dentro de un grupo y el radio solo permite eligir 1 dentro de un grupo. 
+
+values="" es un atributo que se usa para hacer peticiones en el servidor de esa forma lo relacionas con un servidor usando JS
+
+input datalist nos muestra una lista, permitiendo elegir un elemento, tambien tiene la funcion de autocompletado mostrando los elementos que inician con una letra en especifico 
+
+    Un datalist tiene 2 partes o 2 etiquetas una separada de la otra:
+                <div class="campo">
+                    <label for="categoria">Categoría de Interés</label>
+                    <input list="categorias" name="categorias">
+                    <datalist id="categorias">
+                    En HTML, la etiqueta <option> no necesita una etiqueta de cierre (</option>) cuando se usa dentro de <datalist> o <select>, porque sigue la regla de los elementos vacíos en HTML.
+                        <option value="Cocina">
+                        <option value="Sala">
+                        <option value="Cuarto">
+                        <option value="Oficina">
+                        <option value="Televisión">
+                        <option value="Sala de estar">
+                    </datalist>
+                </div>
+
+    🎯 ¿Cuándo y por qué usar value?
+✅ Para definir valores específicos que se enviarán al backend.
+✅ En checkbox y radio, se usa para definir qué opción se selecciona.
+✅ En los <option> dentro de <select> y <datalist>, value es el dato que se enviará.
+
+📌 En resumen:
+
+value="" define el valor que se enviará al servidor cuando el usuario haga una selección o escriba un dato.
+En un <select> o <datalist>, se usa para definir qué valor se envía cuando el usuario elige una opción.
+En un <input> de tipo text, radio, checkbox, etc., establece el valor por defecto del campo.
+Si tienes alguna otra duda, dime. 🚀
+
+
+
+***************submit*************
+📌 ¿Qué es submit en HTML?
+En HTML, submit es un tipo de botón (<input type="submit"> o <button type="submit">) que se usa para enviar un formulario al servidor.
+
+🔹 ¿Cómo funciona?
+
+Cuando el usuario llena el formulario y hace clic en "Enviar", los datos se envían al archivo "procesar.php".
+El atributo method="POST" define que los datos se enviarán usando el método POST (también puede ser GET).
+
+    <input type="submit" value="Enviar formulario">
+
+    🔹 submit envía el formulario automáticamente.
+    🔹 button no hace nada por sí solo, pero se puede programar con JavaScript.
+
+
+El atributo action en un formulario HTML define la URL a la que se enviarán los datos del formulario cuando el usuario lo envía. Básicamente, le dice al navegador a dónde enviar la información ingresada en los campos.
+
+        <form action="procesar.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+            
+            <button type="submit">Enviar</button>
+        </form>
+
+
+Ejemplo de action con una URL externa
+Puedes enviar datos a otra página o incluso a otro servidor:
+
+            html
+            <form action="https://ejemplo.com/procesar-formulario" method="POST">
+                <input type="text" name="usuario">
+                <button type="submit">Enviar</button>
+            </form>
+            Cuando el usuario envía el formulario, sus datos van a "https://ejemplo.com/procesar.php", donde el servidor los recibe y procesa.
+
+        ✅ Resumen:
+            Atributo	Descripción
+            action="URL"	Especifica la URL donde se enviarán los datos del formulario.
+            action=""	Si está vacío, los datos se envían a la misma página donde está el formulario.
+            Opción sin action	Si se omite action, el formulario se enviará a la misma URL en la que se encuentra.
+            Ejemplo de uso	<form action="procesar.php" method="post">
