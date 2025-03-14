@@ -75,10 +75,12 @@ img {
     /* transición  */
     transition: background-color .3s ease-out;
     text-align: center;
+    border: none;
 }
 
 .btn:hover {
     background-color: #769c02;
+    cursor: pointer;
 }
 
 
@@ -451,4 +453,58 @@ img {
     height: 40rem;
     width: 40rem;
     object-fit: cover;
+}
+
+
+/* formulario */
+.formulario {
+    max-width: 70rem;
+    /* margen arriba y abajo, auto centro el lado izq y der */
+    margin: 0 auto;
+}
+
+.formulario fieldset {
+    /* border-color: black;
+    border-width: 1px; */
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+
+.formulario legend {
+    background-color: #037bc0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    margin-bottom: 4rem;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo label {
+    flex-basis: 10rem;
+}
+
+/* selector de atributos utiliza [] esta es una forma*/
+/* .campo input[type="text"],
+.campo input[type="tel"],
+.campo input[type="email"],
+textarea  {
+    flex: 1;
+    border: 1px solid #e1e1e1 ;
+} */
+
+/* podemos aplicarlo a todos y negando el de radio  */
+.campo input:not([type="radio"]),
+.campo textarea,
+.campo select {
+    flex: 1;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
 }

@@ -466,3 +466,51 @@ El contenido se estira para llenar completamente el contenedor, sin mantener sus
                 /* mantiene un elemento dentro de las medidad declradas */
                 object-fit: cover;
             }
+
+
+
+
+
+
+
+
+
+
+*******************************************************************************
+Estilo a formularios de contacto.html
+
+flex-basis determina la dimensión inicial del elemento (ancho o alto, según la dirección del flex container) antes de distribuir el espacio extra o reducirlo. Lo podemos usar para que queden alineados los elementos
+
+
+/* selector de atributos utiliza [] */
+
+        Explicación de cada parte:
+        .campo input[type="text"]
+
+        .campo input[type="text"] {
+            flex: 1;
+        }   
+
+    campo: Se refiere a un elemento que tiene la clase campo.
+    input[type="text"]: Se dirige específicamente a los elementos <input> de tipo text dentro de un contenedor con la clase .campo.
+    flex: 1;
+
+    flex: 1; es una abreviatura de flex-grow: 1; flex-shrink: 1; flex-basis: 0%;
+    flex-grow: 1; → El elemento tomará todo el espacio disponible dentro de su contenedor flexible (si este tiene display: flex).
+    Si el contenedor tiene más elementos con flex: 1, todos compartirán el espacio disponible de manera equitativa.
+    Si hay otro elemento con flex: 2;, este ocupará el doble del espacio que el de flex: 1;.
+
+    Resumen
+✔ flex: 1; hace que el <input> ocupe automáticamente todo el espacio disponible dentro del contenedor .campo, distribuyéndose proporcionalmente con otros elementos flexibles.
+
+Si necesitas más personalización o ejemplos, dime qué estás intentando lograr y te ayudo a ajustarlo mejor. 🚀
+
+
+
+Es un selector negado. Aplica la regla a todos los elementos <input>, excepto aquellos de tipo radio.
+        .campo input:not([type="radio"]),
+        textarea {
+            flex: 1;
+            border: 1px solid #e1e1e1;
+            padding: 1rem;
+        }
