@@ -111,16 +111,60 @@ h1, h2 {
 }
 
 
-/* 7 uso de align-items(de arriba hacia abajo, vertical) y justify-content(de izq a der de manera horizontal  */
+/* 7 uso de align-items(de arriba hacia abajo, vertical) y justify-content(de izq a der de manera horizontal usando row y si usamos column se invierte justify-content sera de arriba hacia abajo  y align-items de izquierda a derecha */
 .d-flex-7 {
     display: flex;
+    /* el uso de ambos cambian all usar row y colum */
+    flex-direction: column;
     /* al utililizar display:flex; en automatico usas estos tres argumentos sin escribirlos, ya estan definidos por defecto
     flex-direction: row;
     justify-content: flex-start;
     align-items: stretch; */
     height: 700px;
     /* se aplica de manera horizontal con flex-direction: row; */
-    justify-content: center;
+    justify-content: flex-start;
     /* se aplica de manera vertical  */
-    align-items: flex-end;
+    align-items: flex-start;
+}
+
+
+/* 8 flex-basic afecta o funciona desde los hijos y funciona casi como un width, solo que flex-basis es más flexible ya que si usas flex-basis: 200px y en este ejemplo uno es mas grande, lo que hace es que inicia desde 200px y si un elemento es mas grande no importa que ya flex basis no es tan extricto como el width
+flex-basis permite modificar el ancho */
+.d-flex-8 {
+    display: flex;
+
+}
+/* accedemos a los hijos mediante su clase .box */
+.d-flex-8 .box {
+    /* es el tamaño inicial  */
+    flex-basis: 33.3%;
+}
+
+
+/* 9 gap y calc tambien se usan en el hijo */
+.d-flex-9 {
+    display: flex;
+    /* gap agrega separacion entre los elementos  */
+    /* gap: 2rem; */
+    justify-content: space-between;
+}
+
+/* Este lo usamos para ver como funciona gap y calc() */
+/* .d-flex-9 .box { */
+/* Para seleccionar un hijo */
+.d-flex-9 .box:nth-child(1){
+    /* es el valor inicial */
+    /* flex-basis: 33.3%; */
+
+    /* calc es una funcion de calculadira */
+    /* flex-basis: calc(500px - 240px); */
+
+    /* para seleccionar solo 1 elemento de los 3 que existen */
+    flex-basis: calc(50% - 1rem);
+}
+
+/* cuando usamos los : indica que es un pseudo - selector, aqui seleccionamos el 2 y el 3 */
+.d-flex-9 .box:nth-child(2),
+.d-flex-9 .box:nth-child(3) {
+    flex-basis: calc(25% - 1rem);
 }

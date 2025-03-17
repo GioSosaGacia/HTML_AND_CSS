@@ -206,3 +206,14 @@ Puedes enviar datos a otra página o incluso a otro servidor:
             action=""	Si está vacío, los datos se envían a la misma página donde está el formulario.
             Opción sin action	Si se omite action, el formulario se enviará a la misma URL en la que se encuentra.
             Ejemplo de uso	<form action="procesar.php" method="post">
+
+
+
+
+
+
+
+
+
+Pagínas para practicar: flex-box ---> flexbox froggy
+                        Can I use --> para ver que navegador soporta elementos de html 
