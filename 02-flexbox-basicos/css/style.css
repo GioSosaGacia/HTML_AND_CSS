@@ -66,3 +66,61 @@ h1, h2 {
     background-color: var(--blanco);
     padding: 5rem;
 }
+
+
+/* 1- Inicio del Uso del display flex, se mostrarán de izq a derecha, porque  por default se usa un flex-direction:row; y ese va de izq a der, ejemplo si estamos usando un div en vez de cada uno obtenga una fila se acomodarán en una sola fila  */
+.d-flex {
+    display: flex;
+}
+
+
+/* 2 flex-direction: column; mostrará el acomodo en columnas */
+.d-flex-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 3 Cuando usamos el ->Justify content(con ->direction row) servira para alinear los elementos de manera horizontal  */
+.d-flex-3 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* 4 Cuando usanos el ->>Justify content(con ->direction column se modifica o alinear el cointenido de manera vertical) */
+.d-flex-4 {
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    justify-content: space-around;
+}
+
+
+/* 5 se usa "Align Items": para alinear de arriba hacia abajo cuando la direccion es -->(Directio: row;), por default usa align-items: stretch; que es estirar al espacio disponible cada uno de los elementos*/
+.d-flex-5 {
+    display: flex;
+    height: 700px;
+    align-items: center;
+}
+
+/* 6 se usa "Align Items":para alinear de izq a derecha cuando la direccion es  -->(Direction: column;)*/
+.d-flex-6 {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    align-items: center;
+}
+
+
+/* 7 uso de align-items(de arriba hacia abajo, vertical) y justify-content(de izq a der de manera horizontal  */
+.d-flex-7 {
+    display: flex;
+    /* al utililizar display:flex; en automatico usas estos tres argumentos sin escribirlos, ya estan definidos por defecto
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch; */
+    height: 700px;
+    /* se aplica de manera horizontal con flex-direction: row; */
+    justify-content: center;
+    /* se aplica de manera vertical  */
+    align-items: flex-end;
+}
