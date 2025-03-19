@@ -128,7 +128,7 @@ h1, h2 {
 }
 
 
-/* 8 flex-basic afecta o funciona desde los hijos y funciona casi como un width, solo que flex-basis es más flexible ya que si usas flex-basis: 200px y en este ejemplo uno es mas grande, lo que hace es que inicia desde 200px y si un elemento es mas grande no importa que ya flex basis no es tan extricto como el width
+/* 8 flex-basis afecta o funciona desde los hijos y funciona casi como un width, solo que flex-basis es más flexible ya que si usas flex-basis: 200px y en este ejemplo uno es mas grande, lo que hace es que inicia desde 200px y si un elemento es mas grande no importa que ya flex basis no es tan extricto como el width
 flex-basis permite modificar el ancho */
 .d-flex-8 {
     display: flex;
@@ -167,4 +167,70 @@ flex-basis permite modificar el ancho */
 .d-flex-9 .box:nth-child(2),
 .d-flex-9 .box:nth-child(3) {
     flex-basis: calc(25% - 1rem);
+}
+
+
+/* 10 flex wrap  */
+.d-flex-10 {
+    display: flex;
+    /* La propiedad flex-wrap se usa en un contenedor con display: flex; para definir cómo los elementos dentro del contenedor se distribuyen cuando no caben en una sola línea. su valor por defectro en no-wrap, tambien se puede usar wrap-reverse*/
+    flex-wrap: wrap;
+}
+
+.d-flex-10 .box {
+    flex-basis: 33.3%;
+}
+
+
+/* 11 */
+/* flex grow o factor de crecimiento, tambien toma en cuanta el padding,margin, etc */
+.d-flex-11 {
+    display: flex;
+    /* pueden crecer verticalmente y no horizontalmente */
+    /* height: 500px; */ 
+}
+
+/* por default flex-grow es 0 
+La propiedad flex-grow en CSS se utiliza para definir cómo los elementos dentro de un contenedor flexbox deben "crecer" para llenar el espacio disponible en el contenedor.*/
+.d-flex-11 .box:nth-child(1) {
+    /* es el factor de crecimiento, el contenedor mide 1100px, de esos pixeles, este reparte de forma equitativa pixeles a cada uno de los elementos */
+    flex-grow: 2;
+}
+
+.d-flex-11 .box:nth-child(2) {
+    flex-grow: 1;
+}
+
+.d-flex-11 .box:nth-child(3) {
+    flex-grow: 1;
+}
+
+/* 12 flex Shrink */
+/* flex-shrink especifica cuánto debe encogerse un elemento en relación con los demás cuando el contenedor tiene menos espacio del que los elementos necesitan. */
+.d-flex-12 {
+    display: flex;
+}
+
+.d-flex-12 .box {
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+.d-flex-12 .box:nth-child(3) {
+/* Su valor por defecto es de 1 entre mas pequeña este la pantalla este elemento se encogera mas que lso demas  */
+    flex-shrink: 2;
+}
+
+/* 13 */
+/* Flex Shorthand --> El shorthand (abreviado) para las propiedades flex-grow, flex-shrink, y flex-basis es una manera de escribirlas juntas en una sola línea de código. Esto hace que tu código sea más conciso y fácil de leer. */
+.d-flex-13 {
+    display: flex;
+}
+
+.d-flex-13 .box {
+    /* flex-basis: 33.3% */
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    /* Esta es la forma resumida de los tres de arriba 1.Valoe de crecimiento, 2.decrecion, 3.flex-basis */
+    flex: 1,0, 33.3%;
 }
